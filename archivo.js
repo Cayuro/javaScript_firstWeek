@@ -85,6 +85,6 @@ let titulo = document.getElementById("saludo");
 // 2. Evento
 boton.addEventListener("click", function() {
     // 3. Acción
-    titulo.textContent = "¡Bienvenido al Gym! 🏋️‍♂️";
+    titulo.textContent = "¡Welcome to the first week of JavaScript! 🏋️";
 }); 
 

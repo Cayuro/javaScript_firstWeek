@@ -16,3 +16,9 @@ p{
     margin: 10px;
     color: black;
 }
+span{
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    font-size: 22px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
