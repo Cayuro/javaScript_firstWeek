@@ -22,3 +22,8 @@ span{
     font-size: 22px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+[src="./casosArray.html"]{
+    background-color: aqua;
+    color: antiquewhite;
+    border-radius: 0.75rem;
+}

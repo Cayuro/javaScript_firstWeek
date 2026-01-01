@@ -45,3 +45,74 @@ for (let i = 0; i < celulares.length; i++) {
 .find() - devuelve el valor del primer elemento que cumple la función de prueba proporcionada
 .findIndex() - devuelve el índice del primer elemento que cumple la función de prueba proporcionada
 */
+let animales = ["perro", "gato", "elefante", "tigre", "dinosaurio"];
+
+for (animal in animales) {
+    console.log(` ${animal}: ${animales[animal]}`);
+}
+for (animal of animales) {
+    console.log(` ${animal}`);
+}
+
+
+// --- LABEL ---
+/* uso de label en bucles anidados */
+
+let array1 = ["manzana", "banana", "cereza"];
+let array2 = ["lechuga", "tomate", "zanahoria", array1];
+
+forArray: // label para el bucle for externo
+for (let fruta in array2) {
+    if (Array.isArray(array2[fruta])) {
+        for (let fruta of array1) {
+           /* if (fruta === "banana"){
+                break forArray; // rompe el bucle etiquetado
+            }*/
+            continue forArray; // saltea la iteración del bucle etiquetado
+            console.log(`Fruta: ${fruta}`);
+        }
+    } else {
+        console.log(`Verdura: ${array2[fruta]}`);
+    }
+}
+
+// --- FIN LABEL ---
+
+
+// Ejercicio de función mayorEdad y gratuito 
+// para el primero que entren después de las 2am y antes de las 7am
+
+function mayorEdad() {
+    let edad = parseInt(prompt("Ingrese su edad: "));
+    if (edad >= 18) {
+        //alert("PUEDES INGRESAR, eres mayor de edad.");
+        return true;
+    } else {
+        //alert("NO PUEDES INGRESAR, eres menor de edad.");
+        return false;
+    }
+}
+function ingreso(hora) {
+    let free = false;
+    let edadUsuario = mayorEdad();
+    {
+        if (edadUsuario && (hora >= 2 && hora < 7) && !free) {
+        alert("El ingreso es gratuito. para tí por ser la primera persona en entrar luego de las 2am.");
+        free = true;
+        } else if (edadUsuario) {
+        alert("el ingreso vale $10 dolares.");
+        } 
+        else {
+        alert("No puedes ingresar por ser menor de edad.");
+        }
+    }
+}
+
+ingreso(9);
+ingreso(10);
+ingreso(11);
+ingreso(12);
+ingreso(1);
+ingreso(2);
+ingreso(3);
+ingreso(4);

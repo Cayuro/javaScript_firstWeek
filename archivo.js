@@ -88,3 +88,18 @@ boton.addEventListener("click", function() {
     titulo.textContent = "¡Welcome to the first week of JavaScript! 🏋️";
 }); 
 
+let counter;
+console.log("Valor de counter antes de la asignación: " + counter); // undefined
+    {
+        counter = 5;{
+        console.log("Valor de counter después de la asignación: " + counter); // 5
+        }
+    }
+counter++;
+console.log("Valor de counter después del incremento: " + counter);
+
+
+const boton2 = document.getElementById("pagina");
+boton2.addEventListener("click", function() {
+    window.location.href = "./casosArray.html";
+});
