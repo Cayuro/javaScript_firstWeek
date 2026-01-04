@@ -68,3 +68,4 @@ document.write(app.appInfo());
 for (let i = 2; i <=7; i++){
     document.write(eval("app"+i+".appInfo()"));
 }
+alert(2+"50")
